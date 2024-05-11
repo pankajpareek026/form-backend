@@ -42,7 +42,6 @@ const registerUser = async (req, res, next) => {
                     'any.required': `Email is required`
                 }),
             country: Joi.string()
-                .regex(/^[a-zA-Z]+$/)
                 .required()
                 .messages({
                     'string.base': `Invalid country name`,
@@ -51,7 +50,6 @@ const registerUser = async (req, res, next) => {
                     'any.required': `Country is required`
                 }),
             state: Joi.string()
-                .regex(/^[a-zA-Z]+$/)
                 .required()
                 .messages({
                     'string.base': `Invalid state name`,
@@ -60,7 +58,6 @@ const registerUser = async (req, res, next) => {
                     'any.required': `State is required`
                 }),
             city: Joi.string()
-                .regex(/^[a-zA-Z]+$/)
                 .required()
                 .messages({
                     'string.base': `Invalid city name`,
